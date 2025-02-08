@@ -1,0 +1,252 @@
+:root{
+    --bg-color1: rgb(83, 153, 185);
+    --bg-color2: linear-gradient(135deg,#7ac9b4, #7d6af7);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    background-color: var(--bg-color1);
+    /*background: linear-gradient(135deg, #2954b1, #7d0adb);*/
+    color: #fff;
+    font-family: sans-serif;
+    padding: 0 15px;
+    background-image: url(images/search.1.webp);
+    background-size: 40%; /* Makes sure the image covers the entire screen */
+    background-position: center center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+.search{
+    position: sticky;
+    top: 0;
+    background-color: var(--bg-color1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 15px 0;
+    & #city_input{
+        background-color: white;
+        border: none;
+        padding: 12px;
+        font-size: 16px;
+        border-radius: 25px;
+        color: black;
+        &:focus{
+            outline: none;
+        }
+    }
+    & #searchBtn{
+        border: none;
+        font-size: 16px;
+        padding: 12px;
+        border-radius: 25px;
+        background-color: #fff;
+        cursor: pointer;
+    }
+}
+
+
+
+.current-weather{
+    width: 32%;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, #7d6af7,  #4c90bd);
+    color: #fff;
+    border-radius: 20px;
+    padding: 40px 35px;
+    text-align: center;
+}
+.forecast{
+    text-align: center;
+    margin: 0 auto 0 20px;
+
+}
+
+.card{
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, #7a96c9,#4c90bd);
+    color: #fff;
+    border-radius: 20px;
+    padding: 40px 35px;
+    text-align: center;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-top: 10px;
+    
+    & .forecast-item{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        place-items: center;
+        margin-bottom: 15px;
+
+        & .icon-wrapper{
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+.Location-date{
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    
+    & .smthn{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        place-items: center;
+        margin-bottom: -30px; 
+        & .location {
+            margin-left: -90px;
+
+        }
+    }
+} 
+.smthn img{
+    width: 30px;
+    margin-left: -70px;
+}
+.time-zone{
+    font-size: 25px;
+}
+.idk{
+    display:flex;
+   
+}
+
+
+.other{
+    margin-left: 20px;
+    width: 67%;
+   
+
+}
+.hourly_weather {
+    margin-top: 10px;
+    width: 100%;
+    display: flex; /* Use flex for horizontal alignment */
+    justify-content: space-between; /* Add even spacing between the cards */
+    align-items: center;
+    background: linear-gradient(135deg, #7d6af7, #4c90bd); /* Background styling */
+    color: #fff;
+    border-radius: 20px;
+    padding: 15px;
+    gap: 10px; /* Space between each card */
+}
+
+.hourly_weather .card {
+    display: flex;
+    flex-direction: column; /* Arrange items vertically */
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--bg-color2);
+    background: linear-gradient(135deg, #7a96c9,#4c90bd);
+    border-radius: 15px;
+    padding: 10px;
+    text-align: center;
+    width: 100px; /* Set a fixed width for uniformity */
+    height: 170px; /* Set a height to match proportions */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
+    margin: 0 5px; /* Add horizontal spacing between cards */
+}
+
+.hourly_weather .card img {
+    width: 50px; /* Resize weather icons */
+    height: 50px;
+    margin: 5px 0;
+}
+.details{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /*padding: 0 20px;
+    margin-top: 50px;*/
+}
+.col{
+    display: flex;
+    align-items: center;
+    text-align: left;
+  
+}
+.col img{
+    width: 70px;
+    margin-right: 10px;
+}
+.humidity .wind .air-pressure .feels-like{
+    font-size: 30px;
+    margin-top: -6px;
+}
+.time-zone{
+    display: flex;
+}
+.details .card{
+    display: flex;
+    background: linear-gradient(135deg, #7d6af7, #4c90bd);;
+    & .firstpart{
+        display: grid;
+        margin-left: 65px;
+         & .col{
+        margin-bottom: 40px;
+        margin-top: 25px;
+        margin-left: 50%;
+        margin-right: 50%;
+    }
+}
+    & .secondpart{
+        display: grid;
+        margin-left: 200px;
+        & .col{
+       margin-bottom:25px;
+       margin-top: 40px;
+       margin-left: 50%;
+       margin-right: 50%;
+    }
+}
+}
+
+.sunrise_sunset {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.sunrise_sunset .card{
+    display: flex;
+    background: linear-gradient(135deg, #7d6af7,#4c90bd);
+    & .firstpart{
+        display: grid;
+        margin-left: 100px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+         & .col{
+        margin-left: 65%;
+        margin-right: 50%;
+    }
+}
+    & .secondpart{
+        display: grid;
+        margin-left: 200px;
+        & .col{
+       margin-left: 70%;
+       margin-right: 50%;
+    }
+}
+
+}
+.date-f {
+    margin-right: -100px;
+}
+
+.idk2{
+    margin-top: 200px;
+    margin-left: 100px;
+}
+.alert{
+    margin-top: 200px;
+    margin-left: 0px;
+    font-size: 25px;
+}
